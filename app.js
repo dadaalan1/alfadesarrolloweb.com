@@ -114,15 +114,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, speed);
     };
     
-    // Parallax effect for hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.hero-animation');
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        }
-    });
+    // Parallax effect for hero section ANULADO
+    const parallax = document.querySelector('.hero-animation');
+    if (parallax) {
+        parallax.style.transform = 'none';
+    }
     
     // Service cards hover effect
     const serviceCards = document.querySelectorAll('.service-card');
